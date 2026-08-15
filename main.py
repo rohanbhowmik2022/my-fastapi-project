@@ -7,8 +7,12 @@ def index():
     return "Hello World"
 
 @app.get('/property/{id}') #Path Parameters
-def property(id): #Parameters passed on to the function
+def property(id:int): #Path Parameters passed on to the function
     return {f"This is a property page {id}"} #Returned as a JSON response
+
+@app.get('/user/{username}')
+def profile(username:str):
+    return {f"This is a profile page for user {username}"}
 
 @app.get('/movies')
 def movies():
