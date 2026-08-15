@@ -6,9 +6,9 @@ app = FastAPI()
 def index():
     return "Hello World"
 
-@app.get('/property')
-def property():
-    return "This is a property page"
+@app.get('/property/{id}') #Path Parameters
+def property(id): #Parameters passed on to the function
+    return {f"This is a property page {id}"} #Returned as a JSON response
 
 @app.get('/movies')
 def movies():
