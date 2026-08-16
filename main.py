@@ -7,7 +7,7 @@ def profile(userid:int,commentid:int):
     return {f'Profile page for user with userid {userid} and commentid {commentid}'} 
 
 @app.get('/products')
-def products(id,price): #Query Paramaters
+def products(id:int=None,price:int=None): #Required Query Paramaters
     return {f'Product with an id {id} and price: {price}'}
 
 @app.get('/')
