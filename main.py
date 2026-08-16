@@ -14,6 +14,10 @@ def property(id:int): #Path Parameters passed on to the function
 def profile(username:str):
     return {f"This is a profile page for user {username}"}
 
+@app.get('/user/admin')
+def admin():
+    return {'This is an admin panel'}
+
 @app.get('/movies')
 def movies():
     return {'movie list':{'movie 1', 'movie 2', 'movie 3'}}
