@@ -8,4 +8,3 @@ Created the repository in Github using
 2. gh repo create my-fastapi-project --public --source=. --remote=origin --push
 
 To run the application run : fastapi dev
-

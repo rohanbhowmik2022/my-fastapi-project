@@ -2,6 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+@app.get('/products')
+def products(id,price): #Query Paramaters
+    return {f'Product with an id {id} and price: {price}'}
+
 @app.get('/')
 def index():
     return "Hello World"
